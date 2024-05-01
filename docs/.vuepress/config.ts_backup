@@ -18,7 +18,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: "运维开发",
+      title: "Evan's blog",
       description: 'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
     }
   },
@@ -29,14 +29,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 导航配置
     nav: [
       { text: '首页', link: '/' },
-      
       {
-        text: 'DevOps',
-        link: '/devops/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
+        text: '前端',
+        link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
         items: [
           // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
           {
-            text: 'CI/CD',
+            text: '前端文章',
             items: [
               { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
             ],
@@ -69,17 +68,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           },
         ],
       },
-
-
       {
-        text: '容器技术',
-        link: '/container/',
+        text: '页面',
+        link: '/ui/',
         items: [
-          { text: 'Docker', link: '/pages/8309a5b876fc95e3/' },
-          { text: 'kubernetes', link: '/pages/0a83b083bdf257cb/' },
+          { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
+          { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
         ],
       },
-
       {
         text: '技术',
         link: '/technology/',
