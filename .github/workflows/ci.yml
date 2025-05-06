@@ -6,7 +6,7 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - master
 
 env: # 设置环境变量
   TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用该时区时间）
@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [18.x]
 
     steps:
       - name: Checkout # 步骤1
@@ -34,7 +34,7 @@ jobs:
           user_email=`git log -1 --pretty=format:'%ae'`
           deploy_branch=gh-pages
           npm install
-          npm run build
+          npm run deploy
           cd docs/.vuepress/dist
           git config --global init.defaultBranch $deploy_branch
           git init
