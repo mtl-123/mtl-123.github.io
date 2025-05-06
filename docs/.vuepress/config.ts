@@ -37,12 +37,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             text: '前端开发',
             items: [
               { text: 'HTML/CSS', link: '/notes/html-css/' },
-              { text: 'JavaScript', link: '/notes/javascript/' },
-              { text: 'Web APIs', link: '/notes/web-apis/' },
-              { text: 'Vue', link: '/note/vue/' },
-              { text: 'React', link: '/note/react/' },
-              { text: 'Angular', link: '/notes/angular/' },
-              { text: 'TypeScript', link: '/notes/typescript/' },
               { text: 'Webpack/Vite', link: '/notes/build-tools/' },
               { text: '测试框架', link: '/notes/testing-frameworks/' }
             ]
@@ -60,8 +54,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           {
             text: '移动开发',
             items: [
-              { text: 'Flutter', link: '/notes/flutter/' },
-              { text: 'React Native', link: '/notes/react-native/' },
               { text: 'Swift (iOS)', link: '/notes/swift/' },
               { text: 'Kotlin (Android)', link: '/notes/kotlin/' }
             ]
@@ -100,6 +92,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             items: [
               { text: 'Docker', link: '/notes/docker/' },
               { text: 'Kubernetes', link: '/notes/kubernetes/' },
+              { text: 'KVM', link: '/notes/KVM/' },
               { text: '服务网格', link: '/notes/service-mesh/' },
               { text: '容器安全', link: '/notes/container-security/' }
             ]
