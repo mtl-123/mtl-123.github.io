@@ -1,4 +1,4 @@
-name: CI
+name: CI - Build, Deploy & Update Description
 
 on:
   push:
@@ -11,19 +11,14 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: ['20.x']
-
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }} 🧱
+      - name: Use Node.js 🧱
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '20.x'
 
       - name: Install dependencies 📦
         run: npm install
@@ -31,11 +26,22 @@ jobs:
       - name: Build project 🏗️
         run: npm run build
 
-      - name: Check dist folder (for debug) 🔍
-        run: ls -la docs/.vuepress/dist
-
       - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: docs/.vuepress/dist
+
+      - name: Get current date and commit info 📅
+        id: info
+        run: |
+          echo "commit_hash=$(git rev-parse --short HEAD)" > $GITHUB_ENV
+          echo "build_time=$(date '+%Y-%m-%d %H:%M')" >> $GITHUB_ENV
+
+      - name: Update repo description via GitHub API 🔁
+        run: |
+          curl -X PATCH \
+            -H "Authorization: Bearer ${{ secrets.GH_REPO_ACCESS_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d "{\"description\":\"📚 文档已自动部署 @ ${{ env.build_time }} (commit: ${{ env.commit_hash }})\"}" \
+            "https://api.github.com/repos/${{ github.repository }}"
