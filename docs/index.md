@@ -13,44 +13,44 @@ features: # 可选的
     link: /dev/ # 可选
     imgUrl: /img/web.png # 可选
 
-  - title: 运维
-    details: JavaScript、ES6、Vue框架等前端技术
-    link: /ops/ # 可选
-    imgUrl: /img/web.png # 可选
+  # - title: 运维
+  #   details: JavaScript、ES6、Vue框架等前端技术
+  #   link: /ops/ # 可选
+  #   imgUrl: /img/web.png # 可选
 
-  - title: 网络
-    details: JavaScript、ES6、Vue框架等前端技术
-    link: /network/ # 可选
-    imgUrl: /img/web.png # 可选
-  - title: 数据
-    details: JavaScript、ES6、Vue框架等前端技术
-    link: /data/ # 可选
-    imgUrl: /img/web.png # 可选
-  - title: 安全
-    details: JavaScript、ES6、Vue框架等前端技术
-    link: /security/ # 可选
-    imgUrl: /img/web.png # 可选
-  - title: 系统
-    details: JavaScript、ES6、Vue框架等前端技术
-    link: /system/ # 可选
-    imgUrl: /img/web.png # 可选
-  - title: 技术栈
-    details: JavaScript、ES6、Vue框架等前端技术
-    link: /tech-stack/ # 可选
-    imgUrl: /img/web.png # 可选
-  - title: 跨境电商
-    details: JavaScript、ES6、Vue框架等前端技术
-    link: /ecommerce/ # 可选
-    imgUrl: /img/web.png # 可选
-  - title: 投资
-    details: JavaScript、ES6、Vue框架等前端技术
-    link: /investment/ # 可选
-    imgUrl: /img/web.png # 可选
+  # - title: 网络
+  #   details: JavaScript、ES6、Vue框架等前端技术
+  #   link: /network/ # 可选
+  #   imgUrl: /img/web.png # 可选
+  # - title: 数据
+  #   details: JavaScript、ES6、Vue框架等前端技术
+  #   link: /data/ # 可选
+  #   imgUrl: /img/web.png # 可选
+  # - title: 安全
+  #   details: JavaScript、ES6、Vue框架等前端技术
+  #   link: /security/ # 可选
+  #   imgUrl: /img/web.png # 可选
+  # - title: 系统
+  #   details: JavaScript、ES6、Vue框架等前端技术
+  #   link: /system/ # 可选
+  #   imgUrl: /img/web.png # 可选
+  # - title: 技术栈
+  #   details: JavaScript、ES6、Vue框架等前端技术
+  #   link: /tech-stack/ # 可选
+  #   imgUrl: /img/web.png # 可选
+  # - title: 跨境电商
+  #   details: JavaScript、ES6、Vue框架等前端技术
+  #   link: /ecommerce/ # 可选
+  #   imgUrl: /img/web.png # 可选
+  # - title: 投资
+  #   details: JavaScript、ES6、Vue框架等前端技术
+  #   link: /investment/ # 可选
+  #   imgUrl: /img/web.png # 可选
 
-  - title: 索引
-    details: JavaScript、ES6、Vue框架等前端技术
-    link: /archives/ # 可选
-    imgUrl: /img/web.png # 可选
+  # - title: 索引
+  #   details: JavaScript、ES6、Vue框架等前端技术
+  #   link: /archives/ # 可选
+  #   imgUrl: /img/web.png # 可选
 
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表

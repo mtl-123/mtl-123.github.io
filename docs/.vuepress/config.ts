@@ -298,7 +298,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         text: '跨境电商',
         link: '/ecommerce/',
         items: [
-          { text: '平台架构', link: '/notes/ecommerce-platform/' },
+          { text: '抖音', link: '/notes/douyin/' },
+          { text: '视频号', link: '/notes/shipinhao/' },
+          { text: '淘宝', link: '/notes/taobao/' },
           { text: '支付系统', link: '/notes/payment-system/' },
           { text: '物流系统', link: '/notes/logistics-supply-chain/' }
         ]
