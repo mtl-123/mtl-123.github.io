@@ -40,14 +40,14 @@ jobs:
 
       - name: Debug Secrets 🔍
         run: |
-          echo "GH_REPO_ACCESS_TOKEN = ${{ secrets.GH_REPO_ACCESS_TOKEN }}"
+          echo "GH_REPO_ACCESS_TOKEN = ${{ secrets.ACCESS_TOKEN }}"
 
       - name: Update repo description via GitHub API 🔁
         run: |
           response=$(curl -s -w "\n%{http_code}" -X PATCH \
             -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            -d "{\"description\":\"📚 文档已自动部署 @ ${{ env.build_time }} (commit: ${{ env.commit_hash }})\"}" \
+            -d "{\"description\":\"📘 文档更新于 ${{ env.build_time }} · commit: ${{ env.commit_hash }}\"}" \
             "https://api.github.com/repos/${{ github.repository }}")
 
           echo "GitHub API Response:"
