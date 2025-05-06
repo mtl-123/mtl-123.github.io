@@ -46,7 +46,7 @@ npm install # or yarn install
 # develop
 npm run dev # or yarn dev
 ```
-
+# uv python 
 
 
 Copyright (c) 2025-present MeiChen
