@@ -16,8 +16,6 @@
  [效果](https://xugaoyi.com/)  |
  [本仓库的gitee镜像](https://gitee.com/xugaoyi/vuepress-theme-vdoing)
 
-
-
 ## 介绍
 1. 这个主题的初衷是打造一个好用的、面向程序员的`知识管理工具`
 2. 轻松构建一个`结构化`的知识库，让你的知识海洋像一本本书一样清晰易读。
