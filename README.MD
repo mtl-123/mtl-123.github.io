@@ -8,6 +8,17 @@
   <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/actions?query=workflow%3AbaiduPush"><img src="https://github.com/xugaoyi/vuepress-theme-vdoing/workflows/baiduPush/badge.svg" alt="baiduPush"></a>
 </p>
 
+# 我的项目
+
+这是一个使用 VuePress 构建的文档站点。
+
+- ✨ 支持 Markdown
+- 🚀 使用 GitHub Actions 自动部署
+- 📚 文档地址: [点击这里访问](https://mtl-123.github.io/)
+
+欢迎 Star ⭐！
+
+
 <h2 align="center">vuepress-theme-vdoing</h2>
 
 
