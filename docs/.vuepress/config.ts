@@ -109,7 +109,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             text: 'DevOps',
             items: [
               { text: 'CI/CD', link: '/notes/cicd-pipeline/' },
+<<<<<<< HEAD
               { text: 'Git', link: '/notes/git/' },
+=======
+>>>>>>> 603e624e13fbab521c558b28d397c95a71dfc1da
               { text: '自动化部署', link: '/notes/automation-deployment/' },
               { text: '企业实践', link: '/notes/devops-enterprise/' }
             ]
