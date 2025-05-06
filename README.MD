@@ -11,7 +11,6 @@
 <h2 align="center">vuepress-theme-vdoing</h2>
 
 
-
  [文档](https://doc.xugaoyi.com/)  |
  [效果](https://xugaoyi.com/)  |
  [本仓库的gitee镜像](https://gitee.com/xugaoyi/vuepress-theme-vdoing)
@@ -37,6 +36,7 @@ git clone https://github.com/xugaoyi/vuepress-theme-vdoing.git
 
 # enter the project directory
 cd vuepress-theme-vdoing
+
 
 # install dependency
 npm install # or yarn install
