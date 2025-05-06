@@ -67,6 +67,16 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               { text: 'MongoDB', link: '/notes/mongodb/' },
               { text: 'Redis', link: '/notes/redis/' }
             ]
+          }, 
+          // 开发工具
+          {
+            text: '开发工具',
+            items: [
+              { text: 'vscode', link: '/notes/mysql/' },
+              { text: 'uv', link: '/notes/uv/' },
+              { text: 'VIM', link: '/notes/vim/' },
+
+            ]
           }
         ]
       },
