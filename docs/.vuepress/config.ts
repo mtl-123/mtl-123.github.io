@@ -27,6 +27,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   // 主题配置
   themeConfig: {
     nav: [
+      { text: '首页', link: '/' },
       // 1. 开发体系
       {
         text: '开发',
@@ -250,7 +251,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             items: [
               { text: 'Linux', link: '/notes/linux/' },
               { text: 'Windows', link: '/notes/windows/' },
-              { text: 'Firewall', link: ' /notes/Firewall' }
+              { text: 'Firewall', link: ' /notes/firewall' }
             ]
           },
           // 系统监控
