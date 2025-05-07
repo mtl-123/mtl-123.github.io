@@ -67,7 +67,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               { text: 'MongoDB', link: '/notes/mongodb/' },
               { text: 'Redis', link: '/notes/redis/' }
             ]
-          }, 
+          },
           // 开发工具
           {
             text: '开发工具',
@@ -248,8 +248,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           {
             text: '操作系统',
             items: [
-              { text: 'Linux内核', link: '/notes/linux-basics/' },
-              { text: 'Windows Server', link: '/notes/windows-server/' }
+              { text: 'Linux', link: '/notes/linux/' },
+              { text: 'Windows', link: '/notes/windows/' },
+              { text: 'Firewall', link: ' /notes/Firewall' }
             ]
           },
           // 系统监控
