@@ -306,6 +306,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '抖音', link: '/notes/douyin/' },
           { text: '视频号', link: '/notes/shipinhao/' },
           { text: '淘宝', link: '/notes/taobao/' },
+          { text: '小红书', link: '/notes/xiaohongshu/' },
           { text: '支付系统', link: '/notes/payment-system/' },
           { text: '物流系统', link: '/notes/logistics-supply-chain/' }
         ]
