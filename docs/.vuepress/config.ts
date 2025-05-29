@@ -1,352 +1,352 @@
 /**
  * 提示：如您想使用JS版本的配置文件可参考：https://github.com/xugaoyi/vuepress-theme-vdoing/tree/a2f03e993dd2f2a3afdc57cf72adfc6f1b6b0c32/docs/.vuepress
  */
-import { resolve } from 'path'
-import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config'
-import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
-import dayjs from 'dayjs'
-import baiduCode from './config/baiduCode' // 百度统计hm码
-import htmlModules from './config/htmlModules' // 自定义插入的html块
+import { resolve } from "path";
+import { defineConfig4CustomTheme, UserPlugins } from "vuepress/config";
+import { VdoingThemeConfig } from "vuepress-theme-vdoing/types";
+import dayjs from "dayjs";
+import baiduCode from "./config/baiduCode"; // 百度统计hm码
+import htmlModules from "./config/htmlModules"; // 自定义插入的html块
 
-const DOMAIN_NAME = 'xugaoyi.com' // 域名 (不带https)
-const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
+const DOMAIN_NAME = "xugaoyi.com"; // 域名 (不带https)
+const WEB_SITE = `https://${DOMAIN_NAME}`; // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
-  theme: 'vdoing', // 使用npm主题包
+  theme: "vdoing", // 使用npm主题包
   // theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
 
   locales: {
-    '/': {
-      lang: 'zh-CN',
+    "/": {
+      lang: "zh-CN",
       title: "Evan",
-      description: 'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
-    }
+      description:
+        "web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。",
+    },
   },
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
 
   // 主题配置
   themeConfig: {
     nav: [
-      { text: '首页', link: '/' },
+      { text: "首页", link: "/" },
       // 1. 开发体系
       {
-        text: '开发',
-        link: '/dev/',
+        text: "开发",
+        link: "/dev/",
         items: [
           // 前端开发
           {
-            text: '前端开发',
+            text: "前端开发",
             items: [
-              { text: 'HTML/CSS', link: '/notes/html-css/' },
-              { text: 'Webpack/Vite', link: '/notes/build-tools/' },
-              { text: '测试框架', link: '/notes/testing-frameworks/' }
-            ]
+              { text: "HTML/CSS", link: "/notes/html-css/" },
+              { text: "Webpack/Vite", link: "/notes/build-tools/" },
+              { text: "测试框架", link: "/notes/testing-frameworks/" },
+            ],
           },
           // 后端开发
           {
-            text: '后端开发',
+            text: "后端开发",
             items: [
-              { text: 'Python', link: '/notes/python/' },
-              { text: 'Shell', link: '/notes/shell/' },
-              { text: 'Go', link: '/notes/go/' },
-            ]
+              { text: "Python", link: "/notes/python/" },
+              { text: "Shell", link: "/notes/shell/" },
+              { text: "Go", link: "/notes/go/" },
+            ],
           },
           // 移动开发
           {
-            text: '移动开发',
+            text: "移动开发",
             items: [
-              { text: 'Swift (iOS)', link: '/notes/swift/' },
-              { text: 'Kotlin (Android)', link: '/notes/kotlin/' }
-            ]
+              { text: "Swift (iOS)", link: "/notes/swift/" },
+              { text: "Kotlin (Android)", link: "/notes/kotlin/" },
+            ],
           },
           // 数据库
           {
-            text: '数据库',
+            text: "数据库",
             items: [
-              { text: 'MySQL', link: '/notes/mysql/' },
-              { text: 'PostgreSQL', link: '/notes/postgresql/' },
-              { text: 'MongoDB', link: '/notes/mongodb/' },
-              { text: 'Redis', link: '/notes/redis/' }
-            ]
+              { text: "MySQL", link: "/notes/mysql/" },
+              { text: "PostgreSQL", link: "/notes/postgresql/" },
+              { text: "MongoDB", link: "/notes/mongodb/" },
+              { text: "Redis", link: "/notes/redis/" },
+            ],
           },
           // 开发工具
           {
-            text: '开发工具',
+            text: "开发工具",
             items: [
-              { text: 'vscode', link: '/notes/mysql/' },
-              { text: 'uv', link: '/notes/uv/' },
-              { text: 'VIM', link: '/notes/vim/' },
-              { text: 'nvm', link: '/notes/nvm/' },
-              { text: 'fish', link: '/notes/fish/' }
-
-            ]
-          }
-        ]
+              { text: "vscode", link: "/notes/mysql/" },
+              { text: "uv", link: "/notes/uv/" },
+              { text: "VIM", link: "/notes/vim/" },
+              { text: "nvm", link: "/notes/nvm/" },
+              { text: "fish", link: "/notes/fish/" },
+            ],
+          },
+        ],
       },
 
       // 2. 运维体系
       {
-        text: '运维',
-        link: '/ops/',
+        text: "运维",
+        link: "/ops/",
         items: [
           // 虚拟化
           {
-            text: '虚拟化技术',
+            text: "虚拟化技术",
             items: [
-              { text: 'KVM/QEMU', link: '/notes/kvm-qemu/' },
-              { text: 'Proxmox VE', link: '/notes/pve/' },
-              { text: 'oVirt', link: '/notes/ovirt/' },
-              { text: 'Hyper-V', link: '/notes/hyper-v/' }
-            ]
+              { text: "KVM/QEMU", link: "/notes/kvm-qemu/" },
+              { text: "Proxmox VE", link: "/notes/pve/" },
+              { text: "oVirt", link: "/notes/ovirt/" },
+              { text: "Hyper-V", link: "/notes/hyper-v/" },
+            ],
           },
           // 容器化
           {
-            text: '容器化',
+            text: "容器化",
             items: [
-              { text: 'Docker', link: '/notes/docker/' },
-              { text: 'Kubernetes', link: '/notes/kubernetes/' },
-              { text: 'KVM', link: '/notes/KVM/' },
-              { text: '服务网格', link: '/notes/service-mesh/' },
-              { text: '容器安全', link: '/notes/container-security/' }
-            ]
+              { text: "Docker", link: "/notes/docker/" },
+              { text: "Kubernetes", link: "/notes/kubernetes/" },
+              { text: "KVM", link: "/notes/KVM/" },
+              { text: "服务网格", link: "/notes/service-mesh/" },
+              { text: "容器安全", link: "/notes/container-security/" },
+            ],
           },
           // DevOps
           {
-            text: 'DevOps',
+            text: "DevOps",
             items: [
-              { text: 'CI/CD', link: '/notes/cicd-pipeline/' },
-              { text: 'Git', link: '/notes/git/' },
-              { text: '自动化部署', link: '/notes/automation-deployment/' },
-              { text: '企业实践', link: '/notes/devops-enterprise/' }
-            ]
+              { text: "CI/CD", link: "/notes/cicd-pipeline/" },
+              { text: "Git", link: "/notes/git/" },
+              { text: "自动化部署", link: "/notes/automation-deployment/" },
+              { text: "企业实践", link: "/notes/devops-enterprise/" },
+            ],
           },
           // 系统安全
           {
-            text: '系统安全',
+            text: "系统安全",
             items: [
-              { text: '漏洞管理', link: '/notes/vulnerability-management/' },
-              { text: '入侵检测', link: '/notes/ids-ips/' },
-              { text: '加密技术', link: '/notes/encryption/' }
-            ]
-          }
-        ]
+              { text: "漏洞管理", link: "/notes/vulnerability-management/" },
+              { text: "入侵检测", link: "/notes/ids-ips/" },
+              { text: "加密技术", link: "/notes/encryption/" },
+            ],
+          },
+        ],
       },
 
       // 3. 网络体系
       {
-        text: '网络',
-        link: '/network/',
+        text: "网络",
+        link: "/network/",
         items: [
           // 网络协议
           {
-            text: '网络协议',
+            text: "网络协议",
             items: [
-              { text: 'TCP/IP', link: '/notes/tcpip-basics/' },
-              { text: 'HTTP/HTTPS', link: '/notes/http-protocol/' },
-              { text: 'BGP协议', link: '/notes/bgp-protocol/' }
-            ]
+              { text: "TCP/IP", link: "/notes/tcpip-basics/" },
+              { text: "HTTP/HTTPS", link: "/notes/http-protocol/" },
+              { text: "BGP协议", link: "/notes/bgp-protocol/" },
+            ],
           },
           // 网络设备
           {
-            text: '网络设备',
+            text: "网络设备",
             items: [
-              { text: '华为交换机', link: '/notes/huawei-switches/' },
-              { text: '华为路由器', link: '/notes/huawei-routers/' },
-              { text: '华为防火墙', link: '/notes/huawei-firewalls/' },
-              { text: '思科IOS', link: '/notes/cisco-ios/' },
-              { text: '思科ASA', link: '/notes/cisco-asa/' }
-            ]
+              { text: "华为交换机", link: "/notes/huawei-switches/" },
+              { text: "华为路由器", link: "/notes/huawei-routers/" },
+              { text: "华为防火墙", link: "/notes/huawei-firewalls/" },
+              { text: "思科IOS", link: "/notes/cisco-ios/" },
+              { text: "思科ASA", link: "/notes/cisco-asa/" },
+            ],
           },
           // 网络服务
           {
-            text: '网络服务',
+            text: "网络服务",
             items: [
-              { text: 'Nginx', link: '/notes/nginx/' },
-              { text: 'CDN/负载均衡', link: '/notes/cdn-load-balancing/' },
-              { text: 'Samba', link: '/notes/samba/' }
-            ]
+              { text: "Nginx", link: "/notes/nginx/" },
+              { text: "CDN/负载均衡", link: "/notes/cdn-load-balancing/" },
+              { text: "Samba", link: "/notes/samba/" },
+            ],
           },
           // 网络安全
           {
-            text: '网络安全',
+            text: "网络安全",
             items: [
-              { text: 'WireGuard', link: '/notes/wireguard/' },
-              { text: '防火墙策略', link: '/notes/firewall-config/' },
-              { text: '网络隔离', link: '/notes/network-segmentation/' }
-            ]
-          }
-        ]
+              { text: "WireGuard", link: "/notes/wireguard/" },
+              { text: "防火墙策略", link: "/notes/firewall-config/" },
+              { text: "网络隔离", link: "/notes/network-segmentation/" },
+            ],
+          },
+        ],
       },
 
       // 4. 数据体系
       {
-        text: '数据',
-        link: '/data/',
+        text: "数据",
+        link: "/data/",
         items: [
           // 数据工程
           {
-            text: '数据工程',
+            text: "数据工程",
             items: [
-              { text: 'Kafka', link: '/notes/kafka/' },
-              { text: 'Flume', link: '/notes/flume/' }
-            ]
+              { text: "Kafka", link: "/notes/kafka/" },
+              { text: "Flume", link: "/notes/flume/" },
+            ],
           },
           // 数据分析
           {
-            text: '数据分析',
+            text: "数据分析",
             items: [
-              { text: 'ELK Stack', link: '/notes/elk/' },
-              { text: 'Spark', link: '/notes/spark/' }
-            ]
+              { text: "ELK Stack", link: "/notes/elk/" },
+              { text: "Spark", link: "/notes/spark/" },
+            ],
           },
           // 数据可视化
           {
-            text: '数据可视化',
+            text: "数据可视化",
             items: [
-              { text: 'Grafana', link: '/notes/grafana/' },
-              { text: 'Tableau', link: '/notes/tableau/' }
-            ]
-          }
-        ]
+              { text: "Grafana", link: "/notes/grafana/" },
+              { text: "Tableau", link: "/notes/tableau/" },
+            ],
+          },
+        ],
       },
 
       // 5. 安全体系
       {
-        text: '安全',
-        link: '/security/',
+        text: "安全",
+        link: "/security/",
         items: [
           // 应用安全
           {
-            text: '应用安全',
+            text: "应用安全",
             items: [
-              { text: 'OWASP Top 10', link: '/notes/owasp/' },
-              { text: '代码审计', link: '/notes/code-audit/' }
-            ]
+              { text: "OWASP Top 10", link: "/notes/owasp/" },
+              { text: "代码审计", link: "/notes/code-audit/" },
+            ],
           },
           // 云安全
           {
-            text: '云安全',
+            text: "云安全",
             items: [
-              { text: 'CSPM', link: '/notes/csmp/' },
-              { text: '云原生安全', link: '/notes/cloud-native-security/' }
-            ]
+              { text: "CSPM", link: "/notes/csmp/" },
+              { text: "云原生安全", link: "/notes/cloud-native-security/" },
+            ],
           },
           // 终端安全
           {
-            text: '终端安全',
+            text: "终端安全",
             items: [
-              { text: 'EDR解决方案', link: '/notes/edr/' },
-              { text: '主机加固', link: '/notes/host-hardening/' }
-            ]
-          }
-        ]
+              { text: "EDR解决方案", link: "/notes/edr/" },
+              { text: "主机加固", link: "/notes/host-hardening/" },
+            ],
+          },
+        ],
       },
 
       // 6. 系统与监控
       {
-        text: '系统',
-        link: '/system/',
+        text: "系统",
+        link: "/system/",
         items: [
           // 操作系统
           {
-            text: '操作系统',
+            text: "操作系统",
             items: [
-              { text: 'Linux', link: '/notes/linux/' },
-              { text: 'Windows', link: '/notes/windows/' },
-              { text: 'Firewall', link: ' /notes/firewall' },
-              { text: 'mount', link: ' /notes/mount' }
-              
-            ]
+              { text: "Linux", link: "/notes/linux/" },
+              { text: "Windows", link: "/notes/windows/" },
+              { text: "Firewall", link: " /notes/firewall" },
+              { text: "mount", link: " /notes/mount" },
+              { text: "logs ", link: " /notes/logs" },
+            ],
           },
           // 系统监控
           {
-            text: '系统监控',
+            text: "系统监控",
             items: [
-              { text: 'Prometheus', link: '/notes/prometheus/' },
-              { text: 'Zabbix', link: '/notes/zabbix/' }
-            ]
+              { text: "Prometheus", link: "/notes/prometheus/" },
+              { text: "Zabbix", link: "/notes/zabbix/" },
+            ],
           },
           // 性能优化
           {
-            text: '性能优化',
+            text: "性能优化",
             items: [
-              { text: 'Shell脚本', link: '/notes/shell-script/' },
-              { text: '系统调优', link: '/notes/system-performance/' }
-            ]
-          }
-        ]
+              { text: "Shell脚本", link: "/notes/shell-script/" },
+              { text: "系统调优", link: "/notes/system-performance/" },
+            ],
+          },
+        ],
       },
 
       // 7. 技术栈
       {
-        text: '技术栈',
-        link: '/tech-stack/',
+        text: "技术栈",
+        link: "/tech-stack/",
         items: [
           // 编程语言
           {
-            text: '编程语言',
+            text: "编程语言",
             items: [
-              { text: 'JavaScript全栈', link: '/notes/js-ecosystem/' },
-              { text: 'Python工程化', link: '/notes/python-engineering/' },
-              { text: 'Go云原生', link: '/notes/go-cloudnative/' }
-            ]
+              { text: "JavaScript全栈", link: "/notes/js-ecosystem/" },
+              { text: "Python工程化", link: "/notes/python-engineering/" },
+              { text: "Go云原生", link: "/notes/go-cloudnative/" },
+            ],
           },
           // 架构模式
           {
-            text: '架构模式',
+            text: "架构模式",
             items: [
-              { text: '事件驱动架构', link: '/notes/event-driven/' },
-              { text: 'Serverless架构', link: '/notes/serverless/' }
-            ]
-          }
-        ]
+              { text: "事件驱动架构", link: "/notes/event-driven/" },
+              { text: "Serverless架构", link: "/notes/serverless/" },
+            ],
+          },
+        ],
       },
 
       // 8. 扩展领域
       {
-        text: '跨境电商',
-        link: '/ecommerce/',
+        text: "跨境电商",
+        link: "/ecommerce/",
         items: [
-          { text: '抖音', link: '/notes/douyin/' },
-          { text: '视频号', link: '/notes/shipinhao/' },
-          { text: '淘宝', link: '/notes/taobao/' },
-          { text: '小红书', link: '/notes/xiaohongshu/' },
-          { text: '支付系统', link: '/notes/payment-system/' },
-          { text: '物流系统', link: '/notes/logistics-supply-chain/' }
-        ]
+          { text: "抖音", link: "/notes/douyin/" },
+          { text: "视频号", link: "/notes/shipinhao/" },
+          { text: "淘宝", link: "/notes/taobao/" },
+          { text: "小红书", link: "/notes/xiaohongshu/" },
+          { text: "支付系统", link: "/notes/payment-system/" },
+          { text: "物流系统", link: "/notes/logistics-supply-chain/" },
+        ],
       },
       {
-        text: '投资',
-        link: '/investment/',
+        text: "投资",
+        link: "/investment/",
         items: [
-          { text: '股票分析', link: '/notes/stock/' },
-          { text: '基金定投', link: '/notes/fund/' },
-          { text: '算法交易', link: '/notes/quantitative-trading/' },
-          { text: '风险管理', link: '/notes/risk-management/' }
-        ]
+          { text: "股票分析", link: "/notes/stock/" },
+          { text: "基金定投", link: "/notes/fund/" },
+          { text: "算法交易", link: "/notes/quantitative-trading/" },
+          { text: "风险管理", link: "/notes/risk-management/" },
+        ],
       },
 
       // 9. 索引与关于
       {
-        text: '索引',
-        link: '/archives/',
+        text: "索引",
+        link: "/archives/",
         items: [
-          { text: '分类', link: '/categories/' },
-          { text: '标签', link: '/tags/' },
-          { text: '归档', link: '/archives/' }
-        ]
+          { text: "分类", link: "/categories/" },
+          { text: "标签", link: "/tags/" },
+          { text: "归档", link: "/archives/" },
+        ],
       },
-      { text: '关于', link: '/about/' }
+      { text: "关于", link: "/about/" },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
-    logo: '/img/logo.png', // 导航栏logo
-    repo: 'mtl-123/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
+    logo: "/img/logo.png", // 导航栏logo
+    repo: "mtl-123/vuepress-theme-vdoing", // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
-    lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
-    docsDir: 'docs', // 编辑的文件夹
+    lastUpdated: "上次更新", // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
+    docsDir: "docs", // 编辑的文件夹
     // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
     editLinks: true, // 启用编辑
-    editLinkText: '编辑',
+    editLinkText: "编辑",
 
     //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
 
@@ -383,20 +383,21 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // defaultMode: 'auto',
 
     // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
-    sidebar: 'structuring',
+    sidebar: "structuring",
 
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
-      name: 'MeiChen', // 必需
-      link: 'https://github.com/mtl-123', // 可选的
+      name: "MeiChen", // 必需
+      link: "https://github.com/mtl-123", // 可选的
     },
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
       //avatar: 'https://jsd.cdn.zzko.cn/gh/xugaoyi/image_store/blog/20200103123203.jpg',
-      avatar: "https://www.mms591.com/www.mms591.com-photo/2013051721/1-13051H11938.jpg",
-      name: 'MeiChen',
-      slogan: '运维界的小学生',
+      avatar:
+        "https://www.mms591.com/www.mms591.com-photo/2013051721/1-13051H11938.jpg",
+      name: "MeiChen",
+      slogan: "运维界的小学生",
     },
 
     // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
@@ -404,19 +405,19 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       // iconfontCssFile: '//at.alicdn.com/t/xxx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加。阿里图片库：https://www.iconfont.cn/
       icons: [
         {
-          iconClass: 'icon-youjian',
-          title: '发邮件',
-          link: 'mailto:894072666@qq.com',
+          iconClass: "icon-youjian",
+          title: "发邮件",
+          link: "mailto:894072666@qq.com",
         },
         {
-          iconClass: 'icon-github',
-          title: 'GitHub',
-          link: 'https://github.com/xugaoyi',
+          iconClass: "icon-github",
+          title: "GitHub",
+          link: "https://github.com/xugaoyi",
         },
         {
-          iconClass: 'icon-erji',
-          title: '听音乐',
-          link: 'https://music.163.com/#/playlist?id=755597173',
+          iconClass: "icon-erji",
+          title: "听音乐",
+          link: "https://music.163.com/#/playlist?id=755597173",
         },
       ],
     },
@@ -431,27 +432,28 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     extendFrontmatter: {
       author: {
-        name: 'MeiChen',
-        link: 'https://github.com/mtl-123'
-      }
+        name: "MeiChen",
+        link: "https://github.com/mtl-123",
+      },
     },
 
     // 自定义hmtl(广告)模块
-    htmlModules
+    htmlModules,
   },
 
   // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
   head: [
-    ['link', { rel: 'icon', href: '/img/favicon.ico' }], //favicons，资源放在public文件夹
+    ["link", { rel: "icon", href: "/img/favicon.ico" }], //favicons，资源放在public文件夹
     [
-      'meta',
+      "meta",
       {
-        name: 'keywords',
-        content: '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
+        name: "keywords",
+        content:
+          "前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown",
       },
     ],
-    ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
-    ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
+    ["meta", { name: "baidu-site-verification", content: "7F55weZDDc" }], // 百度统计的站长验证（你可以去掉）
+    ["meta", { name: "theme-color", content: "#11a8cd" }], // 移动浏览器主题颜色
     // [
     //   'script',
     //   {
@@ -462,7 +464,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // ], // 网站关联Google AdSense 与 html格式广告支持（你可以去掉）
   ],
 
-
   // 插件配置
   plugins: <UserPlugins>[
     [
@@ -472,10 +473,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
     ],
 
-    'vuepress-plugin-baidu-autopush', // 百度自动推送
+    "vuepress-plugin-baidu-autopush", // 百度自动推送
 
     [
-      'vuepress-plugin-baidu-tongji', // 百度统计
+      "vuepress-plugin-baidu-tongji", // 百度统计
       {
         hm: baiduCode,
       },
@@ -486,46 +487,49 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
     [
-      'thirdparty-search',
+      "thirdparty-search",
       {
         thirdparty: [
           {
-            title: '在MDN中搜索',
-            frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
-            behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
+            title: "在MDN中搜索",
+            frontUrl: "https://developer.mozilla.org/zh-CN/search?q=", // 搜索链接的前面部分
+            behindUrl: "", // 搜索链接的后面部分，可选，默认 ''
           },
           {
-            title: '在Runoob中搜索',
-            frontUrl: 'https://www.runoob.com/?s=',
+            title: "在Runoob中搜索",
+            frontUrl: "https://www.runoob.com/?s=",
           },
           {
-            title: '在Vue API中搜索',
-            frontUrl: 'https://cn.vuejs.org/v2/api/#',
+            title: "在Vue API中搜索",
+            frontUrl: "https://cn.vuejs.org/v2/api/#",
           },
           {
-            title: '在Bing中搜索',
-            frontUrl: 'https://cn.bing.com/search?q=',
+            title: "在Bing中搜索",
+            frontUrl: "https://cn.bing.com/search?q=",
           },
           {
-            title: '通过百度搜索本站的',
+            title: "通过百度搜索本站的",
             frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
           },
         ],
-      }
+      },
     ],
 
     [
-      'one-click-copy', // 代码块复制按钮
+      "one-click-copy", // 代码块复制按钮
       {
-        copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
-        copyMessage: '复制成功', // default is 'Copy successfully and then paste it for use.'
+        copySelector: [
+          'div[class*="language-"] pre',
+          'div[class*="aside-code"] aside',
+        ], // String or Array
+        copyMessage: "复制成功", // default is 'Copy successfully and then paste it for use.'
         duration: 1000, // prompt message display time.
         showInMobile: false, // whether to display on the mobile side, default: false.
       },
     ],
 
     [
-      'demo-block', // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
+      "demo-block", // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
       {
         settings: {
           // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
@@ -538,39 +542,38 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
     ],
     [
-      'vuepress-plugin-zooming', // 放大图片
+      "vuepress-plugin-zooming", // 放大图片
       {
-        selector: '.theme-vdoing-content img:not(.no-zoom)', // 排除class是no-zoom的图片
+        selector: ".theme-vdoing-content img:not(.no-zoom)", // 排除class是no-zoom的图片
         options: {
-          bgColor: 'rgba(0,0,0,0.6)',
+          bgColor: "rgba(0,0,0,0.6)",
         },
       },
     ],
     [
-      'vuepress-plugin-comment', // 评论
+      "vuepress-plugin-comment", // 评论
       {
-        choosen: 'gitalk',
+        choosen: "gitalk",
         options: {
-          clientID: 'a6e1355287947096b88b',
-          clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          repo: 'blog-gitalk-comment', // GitHub 仓库
-          owner: 'xugaoyi', // GitHub仓库所有者
-          admin: ['xugaoyi'], // 对仓库有写权限的人
+          clientID: "a6e1355287947096b88b",
+          clientSecret: "f0e77d070fabfcd5af95bebb82b2d574d7248d71",
+          repo: "blog-gitalk-comment", // GitHub 仓库
+          owner: "xugaoyi", // GitHub仓库所有者
+          admin: ["xugaoyi"], // 对仓库有写权限的人
           // distractionFreeMode: true,
-          pagerDirection: 'last', // 'first'正序 | 'last'倒序
-          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-          body:
-            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+          pagerDirection: "last", // 'first'正序 | 'last'倒序
+          id: "<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>", //  页面的唯一标识,长度不能超过50
+          title: "「评论」<%- frontmatter.title %>", // GitHub issue 的标题
+          labels: ["Gitalk", "Comment"], // GitHub issue 的标签
+          body: "页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>", // GitHub issue 的内容
         },
       },
     ],
     [
-      '@vuepress/last-updated', // "上次更新"时间格式
+      "@vuepress/last-updated", // "上次更新"时间格式
       {
         transformer: (timestamp, lang) => {
-          return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
+          return dayjs(timestamp).format("YYYY/MM/DD, HH:mm:ss");
         },
       },
     ],
@@ -578,12 +581,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
   markdown: {
     lineNumbers: true,
-    extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
+    extractHeaders: ["h2", "h3", "h4", "h5", "h6"], // 提取标题到侧边栏的级别，默认['h2', 'h3']
   },
 
   // 监听文件变化并重新构建
-  extraWatchFiles: [
-    '.vuepress/config.ts',
-    '.vuepress/config/htmlModules.ts',
-  ]
-})
+  extraWatchFiles: [".vuepress/config.ts", ".vuepress/config/htmlModules.ts"],
+});
