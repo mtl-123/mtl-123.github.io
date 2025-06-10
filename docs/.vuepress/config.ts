@@ -255,7 +255,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               { text: "Windows", link: "/notes/windows/" },
               { text: "Firewall", link: " /notes/firewall" },
               { text: "mount", link: " /notes/mount" },
-              { text: "logs ", link: " /notes/logs" },
+              
             ],
           },
           // 系统监控
