@@ -49,7 +49,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             items: [
               { text: "Python", link: "/notes/python/" },
               { text: "Shell", link: "/notes/shell/" },
-              { text: "Go", link: "/notes/go/" },
+              { text: "GoLang", link: "/notes/GoLang/" },
             ],
           },
           // 移动开发
