@@ -1,0 +1,53 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 🧱
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies 📦
+        run: npm install
+
+      - name: Build project 🏗️
+        run: npm run build
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: docs/.vuepress/dist
+
+      - name: Get current date and commit info 📅
+        id: info
+        run: |
+          echo "commit_hash=$(git rev-parse --short HEAD)" > $GITHUB_ENV
+          echo "build_time=$(date '+%Y-%m-%d %H:%M')" >> $GITHUB_ENV
+
+      - name: Debug Secrets 🔍
+        run: |
+          echo "GH_REPO_ACCESS_TOKEN = ${{ secrets.ACCESS_TOKEN }}"
+
+      - name: Update repo description via GitHub API 🔁
+        run: |
+          response=$(curl -s -w "\n%{http_code}" -X PATCH \
+            -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d "{\"description\":\"📘 文档更新于 ${{ env.build_time }} · commit: ${{ env.commit_hash }}\"}" \
+            "https://api.github.com/repos/${{ github.repository }}")
+
+          echo "GitHub API Response:"
+          echo "$response"
