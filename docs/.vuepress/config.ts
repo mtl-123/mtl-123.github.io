@@ -50,6 +50,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
               { text: "Python", link: "/notes/python/" },
               { text: "Shell", link: "/notes/shell/" },
               { text: "GoLang", link: "/notes/GoLang/" },
+              { text: "Rust", link: "/notes/Rust/" },
             ],
           },
           // 移动开发
