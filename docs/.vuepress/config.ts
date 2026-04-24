@@ -19,7 +19,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       lang: 'zh-CN',
       title: 'Evan',
       description:
-        'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
+        '专注全栈技术与运维实践，覆盖前端、后端、数据库、K8s、DevOps、网络安全、系统监控、云原生、跨境电商、投资分析的一站式技术博客。,',
     },
   },
 
@@ -386,7 +386,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         name: 'keywords',
         content:
-          '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
+          '专注全栈技术与运维实践，覆盖前端、后端、数据库、K8s、DevOps、网络安全、系统监控、云原生、跨境电商、投资分析的一站式技术博客。',
       },
     ],
     ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }],
